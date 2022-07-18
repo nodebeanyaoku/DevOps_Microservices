@@ -5,11 +5,13 @@
 
 # Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
+dockerpath=nodebe/mlproject
 
 # Step 2:  
 # Authenticate & tag
-echo "Docker ID and Image: $dockerpath"
+echo "Docker ID and Image: $dockerpath "
+docker image tag bfde2c451ef6 $dockerpath 
 
 # Step 3:
 # Push image to a docker repository
+docker image push $dockerpath 
